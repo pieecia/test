@@ -17,7 +17,7 @@ export const ProductCard = ({
   const parsedFeatures = features.join(', ');
 
   return (
-    <div className="bg-white rounded-2xl p-6">
+    <div className="flex flex-col bg-white rounded-2xl p-6">
       <h3 className="text-lg text-black font-bold mb-9">{parsedTitle}</h3>
       <p className="text-xs text-gray-500">
         Pojemność: <span className="text-black font-bold">{capacity}</span>
@@ -40,10 +40,10 @@ export const ProductCard = ({
           {value} {currency}
         </h5>
       </div>
-      <p className="text-base text-gray-700 font-bold">
+      <p className="text-base text-gray-700 font-bold mb-4">
         {installment.value} {currency} x {installment.period} rat
       </p>
-      <div className="text-center mt-4">
+      <div className="text-center mt-auto">
         <Button variant="primary" value="Wybierz" />
       </div>
     </div>
