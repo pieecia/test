@@ -1,10 +1,12 @@
-import { IProduct, ProductCard } from './components/cards/Product';
+import { IProduct } from './interfaces/product';
+import { ProductCard } from './components/cards/Product';
+import { Button } from './components/button';
 
-const data: Product[] = [
+const data: IProduct[] = [
   {
     code: 'WW90T754ABT',
     name: 'Pralka QuickDrive™',
-    color: 'Biały',
+    color: 'biała',
     capacity: 9,
     dimensions: '55 x 60 x 85 cm',
     features: [
@@ -28,8 +30,8 @@ const data: Product[] = [
   {
     code: 'WW90T754ABH',
     name: 'Pralka QuickDrive™',
-    color: 'Biały',
-    capacity: 9,
+    color: 'biała',
+    capacity: 10.5,
     dimensions: '55 x 60 x 85 cm',
     features: [
       'Drzwi AddWash™',
@@ -53,7 +55,7 @@ const data: Product[] = [
   {
     code: 'WW90T754ABC',
     name: 'Pralka QuickDrive™',
-    color: 'Biały',
+    color: 'biała',
     capacity: 8,
     dimensions: '55 x 60 x 85 cm',
     features: [
@@ -78,7 +80,7 @@ const data: Product[] = [
   {
     code: 'WW90T754ABD',
     name: 'Pralka QuickDrive™',
-    color: 'Biały',
+    color: 'biała',
     capacity: 9,
     dimensions: '55 x 60 x 85 cm',
     features: [
@@ -88,7 +90,7 @@ const data: Product[] = [
       'Silnik inwerterowy',
       'Wyświetlacz elektroniczny',
     ],
-    energyClass: 'A',
+    energyClass: 'B',
     price: {
       value: 1999,
       currency: 'zł',
@@ -103,8 +105,8 @@ const data: Product[] = [
   {
     code: 'WW90T754ABE',
     name: 'Pralka QuickDrive™',
-    color: 'Biały',
-    capacity: 8,
+    color: 'biała',
+    capacity: 10.5,
     dimensions: '55 x 60 x 85 cm',
     features: [
       'Drzwi AddWash™',
@@ -113,7 +115,7 @@ const data: Product[] = [
       'Silnik inwerterowy',
       'Wyświetlacz elektroniczny',
     ],
-    energyClass: 'A',
+    energyClass: 'C',
     price: {
       value: 1999,
       currency: 'zł',
@@ -128,8 +130,8 @@ const data: Product[] = [
   {
     code: 'WW90T754ABF',
     name: 'Pralka QuickDrive™',
-    color: 'Biały',
-    capacity: 9,
+    color: 'biała',
+    capacity: 8,
     dimensions: '55 x 60 x 85 cm',
     features: [
       'Drzwi AddWash™',
@@ -138,7 +140,7 @@ const data: Product[] = [
       'Silnik inwerterowy',
       'Wyświetlacz elektroniczny',
     ],
-    energyClass: 'A',
+    energyClass: 'E',
     price: {
       value: 1999,
       currency: 'zł',
@@ -160,6 +162,9 @@ function App() {
           {data.map((product) => (
             <ProductCard key={product.code} {...product} />
           ))}
+        </div>
+        <div className="text-center mt-4">
+          <Button variant={'tertiary'} value={'Pokaż więcej'} />
         </div>
       </div>
     </div>
