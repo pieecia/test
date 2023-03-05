@@ -1,4 +1,7 @@
-type EnergyClass = 'A+++' | 'A++' | 'A+' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G';
+import { Badge } from '../../badge';
+import { Button } from '../../button';
+
+export type EnergyClass = 'A+++' | 'A++' | 'A+' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G';
 
 export interface Product {
   code: string;
@@ -31,13 +34,12 @@ export const ProductCard = ({
   price,
 }: Product) => {
   const { value, currency, installment, validTo, validFrom } = price;
+  const parsedTitle = `${code}, ${name}, ${capacity}kg, ${color}`;
   const parsedFeatures = features.join(', ');
 
   return (
     <div className="bg-white rounded-2xl p-6">
-      <h5 className="text-lg text-black font-bold mb-9">
-        {code},{name}, {capacity}kg, {color}
-      </h5>
+      <h3 className="text-lg text-black font-bold mb-9">{parsedTitle}</h3>
       <p className="text-xs text-gray-500">
         Pojemność: <span className="text-black font-bold">{capacity}</span>
       </p>
@@ -47,8 +49,9 @@ export const ProductCard = ({
       <p className="text-xs text-gray-500 mb-3.5">
         Funkcje: <span className="text-black font-bold">{parsedFeatures}</span>
       </p>
-      <div className="mb-3.5">
-        <p className="text-xs text-gray-500">Klasa energetyczna: {energyClass}</p>
+      <div className="flex items-center mb-3.5 gap-2">
+        <p className="text-xs text-gray-500">Klasa energetyczna</p>
+        <Badge energyClass={energyClass} />
       </div>
       <p className="text-xs text-gray-500">
         Cena obowiązuje od {validFrom.toLocaleDateString()} do {validTo.toLocaleDateString()}
@@ -61,6 +64,9 @@ export const ProductCard = ({
       <p className="text-base text-gray-700 font-bold">
         {installment.value} {currency} x {installment.period} rat
       </p>
+      <div className="text-center mt-4">
+        <Button variant="primary" value="Wybierz" />
+      </div>
     </div>
   );
 };
