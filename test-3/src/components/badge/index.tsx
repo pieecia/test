@@ -1,4 +1,4 @@
-import { EnergyClass } from '../cards/Product';
+import { EnergyClass } from '../../interfaces/product';
 
 interface BadgeProps {
   energyClass: EnergyClass;

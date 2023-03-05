@@ -1,27 +1,6 @@
 import { Badge } from '../../badge';
 import { Button } from '../../button';
-
-export type EnergyClass = 'A+++' | 'A++' | 'A+' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G';
-
-export interface Product {
-  code: string;
-  name: string;
-  color: string;
-  capacity: number;
-  dimensions: string;
-  features: string[];
-  energyClass: EnergyClass;
-  price: {
-    value: number;
-    currency: string;
-    installment: {
-      value: number;
-      period: number;
-    };
-    validFrom: Date;
-    validTo: Date;
-  };
-}
+import { IProduct } from '../../../interfaces/product';
 
 export const ProductCard = ({
   code,
@@ -32,7 +11,7 @@ export const ProductCard = ({
   features,
   energyClass,
   price,
-}: Product) => {
+}: IProduct) => {
   const { value, currency, installment, validTo, validFrom } = price;
   const parsedTitle = `${code}, ${name}, ${capacity}kg, ${color}`;
   const parsedFeatures = features.join(', ');
