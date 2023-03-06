@@ -22,6 +22,10 @@ export const ProductCard = (props: IProduct) => {
 
   const isInCart = items.some((item) => item.code === code);
 
+  const handleAddToCart = () => {
+    isInCart ? removeFromCart(props) : addToCart(props);
+  };
+
   return (
     <div className="flex flex-col bg-white rounded-2xl p-6">
       <h3 className="text-lg text-black font-bold mb-9">{parseTitle}</h3>
@@ -57,7 +61,7 @@ export const ProductCard = (props: IProduct) => {
         <Button
           variant={isInCart ? 'secondary' : 'primary'}
           value={isInCart ? 'Wybrano' : 'Wybierz'}
-          onClick={() => (isInCart ? removeFromCart(props) : addToCart(props))}
+          onClick={handleAddToCart}
         />
       </div>
     </div>
