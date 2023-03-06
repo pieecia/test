@@ -33,21 +33,19 @@ export const Filters = () => {
       </div>
       <div className="grid grid-cols-4 gap-x-3 mb-4">
         <div>
-          <label className="block text-sm font-bold text-black text-lg mb-2">Sortuj</label>
+          <div className="block text-sm font-bold text-black text-lg mb-2">Sortuj</div>
           <Dropdown options={sortOptions} filter={'sort'} />
         </div>
         <div>
-          <label className="block text-sm font-bold text-black text-lg mb-2">Funkcje</label>
+          <div className="block text-sm font-bold text-black text-lg mb-2">Funkcje</div>
           <Dropdown options={featuresOptions} filter={'feature'} />
         </div>
         <div>
-          <label className="block text-sm font-bold text-black text-lg mb-2">
-            Klasa energetyczna
-          </label>
+          <div className="block text-sm font-bold text-black text-lg mb-2">Klasa energetyczna</div>
           <Dropdown options={energyClassOptions} filter={'energyClass'} />
         </div>
         <div>
-          <label className="block text-sm font-bold text-black text-lg mb-2">Pojemność</label>
+          <div className="block text-sm font-bold text-black text-lg mb-2">Pojemność</div>
           <Dropdown options={capacityOptions} filter={'capacity'} />
         </div>
       </div>

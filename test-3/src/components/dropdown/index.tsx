@@ -7,7 +7,7 @@ export interface DropdownOption {
   title?: string;
 }
 
-export interface DropdownProps {
+interface DropdownProps {
   options: DropdownOption[];
   filter: keyof FiltersContextType['filters'];
 }

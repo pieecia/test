@@ -15,7 +15,7 @@ export interface FiltersContextType {
   setFilters: (filters: FiltersContextType['filters']) => void;
 }
 
-export const FiltersContext = createContext<FiltersContextType>({
+const FiltersContext = createContext<FiltersContextType>({
   query: '',
   setQuery: () => null,
   filters: {

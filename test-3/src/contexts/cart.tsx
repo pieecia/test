@@ -6,7 +6,7 @@ interface CartContextType {
   setItems: (items: IProduct[]) => void;
 }
 
-export const CartContext = createContext<CartContextType>({
+const CartContext = createContext<CartContextType>({
   items: [],
   setItems: () => null,
 });
