@@ -2,20 +2,25 @@ import { Badge } from '../../badge';
 import { Button } from '../../button';
 import { IProduct } from '../../../interfaces/product';
 import { parseCurrency } from '../../../utils/parseCurrency';
+import { useCartContext } from '../../../contexts/cart';
 
-export const ProductCard = ({
-  code,
-  name,
-  capacity,
-  color,
-  dimensions,
-  features,
-  energyClass,
-  price,
-}: IProduct) => {
+export const ProductCard = (props: IProduct) => {
+  const { items, setItems } = useCartContext();
+  const { code, name, capacity, color, dimensions, features, energyClass, price } = props;
   const { value, currency, installment, validTo, validFrom } = price;
   const parseTitle = `${code}, ${name}, ${capacity}kg, ${color}`;
   const parseFeatures = features.join(', ');
+
+  const addToCart = (product: IProduct) => {
+    setItems([...items, product]);
+  };
+
+  const removeFromCart = (product: IProduct) => {
+    const filteredItems = items.filter((item) => item.code !== product.code);
+    setItems(filteredItems);
+  };
+
+  const isInCart = items.some((item) => item.code === code);
 
   return (
     <div className="flex flex-col bg-white rounded-2xl p-6">
@@ -49,7 +54,11 @@ export const ProductCard = ({
         {installment.value} {currency} x {installment.period} rat
       </p>
       <div className="flex justify-center mt-auto">
-        <Button variant="primary" value="Wybierz" />
+        <Button
+          variant={isInCart ? 'secondary' : 'primary'}
+          value={isInCart ? 'Wybrano' : 'Wybierz'}
+          onClick={() => (isInCart ? removeFromCart(props) : addToCart(props))}
+        />
       </div>
     </div>
   );
