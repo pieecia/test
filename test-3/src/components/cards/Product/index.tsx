@@ -20,10 +20,10 @@ export const ProductCard = ({
     <div className="flex flex-col bg-white rounded-2xl p-6">
       <h3 className="text-lg text-black font-bold mb-9">{parsedTitle}</h3>
       <p className="text-xs text-gray-500">
-        Pojemność: <span className="text-black font-bold">{capacity}</span>
+        Pojemność(kg): <span className="text-black font-bold">{capacity}</span>
       </p>
       <p className="text-xs text-gray-500">
-        Wymiary: <span className="text-black font-bold">{dimensions}</span>
+        Wymiary(GxSxW): <span className="text-black font-bold">{dimensions}</span>
       </p>
       <p className="text-xs text-gray-500 mb-3.5">
         Funkcje: <span className="text-black font-bold">{parsedFeatures}</span>
@@ -43,7 +43,7 @@ export const ProductCard = ({
       <p className="text-base text-gray-700 font-bold mb-4">
         {installment.value} {currency} x {installment.period} rat
       </p>
-      <div className="text-center mt-auto">
+      <div className="flex justify-center mt-auto">
         <Button variant="primary" value="Wybierz" />
       </div>
     </div>
