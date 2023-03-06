@@ -37,7 +37,7 @@ export const ProductCard = ({
         Cena obowiązuje od {validFrom.toLocaleDateString()} do {validTo.toLocaleDateString()}
       </p>
       <div className="mb-3 flex items-center gap-x-1">
-        <h5 className="text-4xl text-black font-bold">{parseCurrency(value).full}</h5>
+        <h5 className="text-4xl text-black font-bold">{parseCurrency(value).unit}</h5>
         <div className="text-right">
           <div className="text-sm leading-4 text-black font-bold">
             {parseCurrency(value).decimal}
