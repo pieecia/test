@@ -15,7 +15,7 @@ export const mockData: IProduct[] = [
     ],
     energyClass: 'A',
     price: {
-      value: 1999.1,
+      value: 2999.1,
       currency: 'zł',
       installment: {
         value: 53.31,
@@ -58,7 +58,7 @@ export const mockData: IProduct[] = [
     ],
     energyClass: 'A',
     price: {
-      value: 1999.0,
+      value: 1799.0,
       currency: 'zł',
       installment: {
         value: 53.31,
