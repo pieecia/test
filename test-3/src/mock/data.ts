@@ -15,7 +15,7 @@ export const mockData: IProduct[] = [
     ],
     energyClass: 'A',
     price: {
-      value: 1999,
+      value: 1999.1,
       currency: 'zł',
       installment: {
         value: 53.31,
@@ -34,7 +34,7 @@ export const mockData: IProduct[] = [
     features: ['Panel AI Control', 'Silnik inwerterowy', 'Wyświetlacz elektroniczny'],
     energyClass: 'A',
     price: {
-      value: 1999,
+      value: 1999.2,
       currency: 'zł',
       installment: {
         value: 53.31,
@@ -53,13 +53,12 @@ export const mockData: IProduct[] = [
     features: [
       'Drzwi AddWash™',
       'Panel AI Control',
-
       'Silnik inwerterowy',
       'Wyświetlacz elektroniczny',
     ],
     energyClass: 'A',
     price: {
-      value: 1999,
+      value: 1999.0,
       currency: 'zł',
       installment: {
         value: 53.31,
@@ -78,7 +77,7 @@ export const mockData: IProduct[] = [
     features: ['Drzwi AddWash™', 'Panel AI Control', 'Silnik inwerterowy'],
     energyClass: 'B',
     price: {
-      value: 1999,
+      value: 1999.0,
       currency: 'zł',
       installment: {
         value: 53.31,
@@ -102,7 +101,7 @@ export const mockData: IProduct[] = [
     ],
     energyClass: 'C',
     price: {
-      value: 1999,
+      value: 1999.0,
       currency: 'zł',
       installment: {
         value: 53.31,
@@ -121,7 +120,7 @@ export const mockData: IProduct[] = [
     features: ['Drzwi AddWash™', 'Panel AI Control', 'Wyświetlacz elektroniczny'],
     energyClass: 'B',
     price: {
-      value: 1999,
+      value: 1999.0,
       currency: 'zł',
       installment: {
         value: 53.31,
