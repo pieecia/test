@@ -21,7 +21,7 @@ export const Dropdown = ({ options, filter }: DropdownProps) => {
     setFilters({ ...filters, [filter]: option.name });
   };
 
-  const selectedTitle = selected.title || selected.name || 'Wszystko';
+  const selectedTitle = selected.title || selected.name || 'Pokaż wszystkie';
 
   return (
     <div>
@@ -45,7 +45,7 @@ export const Dropdown = ({ options, filter }: DropdownProps) => {
                   `relative cursor-default select-none py-2 px-4 ${active ? 'bg-gray-100' : ''}`
                 }
               >
-                Wszystko
+                Wszystkie
               </Listbox.Option>
               {options.map((option) => (
                 <Listbox.Option
