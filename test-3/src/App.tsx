@@ -1,13 +1,13 @@
 import { ProductCard } from './components/cards/Product';
 import { Button } from './components/button';
-import { data } from './mock/data';
+import { mockData } from './mock/data';
 
 function App() {
   return (
     <div className="bg-gray-100 h-screen">
       <div className="container mx-auto max-w-5xl">
         <div className="grid grid-cols-3 gap-x-4 gap-y-5">
-          {data.map((product) => (
+          {mockData.map((product) => (
             <ProductCard key={product.code} {...product} />
           ))}
         </div>
