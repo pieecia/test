@@ -1,5 +1,5 @@
 import { Products } from './components/products';
-import { Filter } from './components/filter';
+import { Filters } from './components/filters';
 import { FiltersProvider } from './contexts/filters';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="bg-gray-100 h-screen">
       <div className="container mx-auto max-w-5xl">
         <FiltersProvider>
-          <Filter />
+          <Filters />
           <Products />
         </FiltersProvider>
       </div>

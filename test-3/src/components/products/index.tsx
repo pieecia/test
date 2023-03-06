@@ -4,9 +4,13 @@ import { Button } from '../button';
 import { useFilterContext } from '../../contexts/filters';
 
 export const Products = () => {
-  const { filters } = useFilterContext();
+  const { filters, query } = useFilterContext();
 
-  const filteredProducts = mockData.filter((product) => {
+  const searchByTitle = mockData.filter((product) => {
+    return product.code.toLowerCase().includes(query.toLowerCase());
+  });
+
+  const filteredProducts = searchByTitle.filter((product) => {
     if (filters.capacity && product.capacity !== filters.capacity) {
       return false;
     }
