@@ -14,7 +14,7 @@ export const Search = () => {
       placeholder={'Search'}
       value={query}
       onChange={handleChange}
-      className={'text-sm font-normal px-3 py-2 bg-white'}
+      className={'text-sm font-normal px-3 py-2 bg-white w-full'}
     />
   );
 };

@@ -19,7 +19,7 @@ const capacityOptions: DropdownOption[] = [{ name: 8 }, { name: 9 }, { name: 10.
 export const Filters = () => {
   return (
     <div>
-      <div className="mb-8 pt-6 flex justify-center">
+      <div className="mb-8 pt-6 flex max-w-xs mx-auto">
         <Search />
       </div>
       <div className="grid grid-cols-4 gap-x-3 mb-4">
