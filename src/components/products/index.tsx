@@ -7,11 +7,11 @@ import { ChevronDown } from 'react-feather';
 export const Products = () => {
   const { filters, query } = useFilterContext();
 
-  const searchByTitle = mockData.filter((product) => {
+  const searchByCode = mockData.filter((product) => {
     return product.code.toLowerCase().includes(query.toLowerCase());
   });
 
-  const filteredProducts = searchByTitle.filter((product) => {
+  const filteredProducts = searchByCode.filter((product) => {
     if (filters.capacity && product.capacity !== filters.capacity) {
       return false;
     }
