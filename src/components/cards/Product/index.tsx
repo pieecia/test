@@ -6,7 +6,7 @@ import { EnergyBadge } from '../../badge/Energy';
 
 export const ProductCard = (props: IProduct) => {
   const { items, setItems } = useCartContext();
-  const { code, name, capacity, color, dimensions, features, energyClass, price } = props;
+  const { code, name, capacity, color, dimensions, features, energyClass, price, image } = props;
   const { value, currency, installment, validTo, validFrom } = price;
   const parseTitle = `${code}, ${name}, ${capacity}kg, ${color}`;
   const parseFeatures = features.join(', ');
@@ -28,6 +28,9 @@ export const ProductCard = (props: IProduct) => {
 
   return (
     <div className="flex flex-col bg-white rounded-2xl p-6">
+      <div className={'flex justify-center mb-4'}>
+        <img src={image} alt={name} className="h-48 object-cover rounded-2xl" />
+      </div>
       <h3 className="text-lg text-black font-bold mb-9">{parseTitle}</h3>
       <p className="text-xs text-gray-500">
         Pojemność(kg): <span className="text-black font-bold">{capacity}</span>

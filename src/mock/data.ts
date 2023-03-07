@@ -2,6 +2,8 @@ import { IProduct } from '../interfaces/product';
 
 export const mockData: IProduct[] = [
   {
+    image:
+      'https://f00.esfr.pl/foto/5/71215465857/b7c91239dad8f45eae1abe48d24c6b3b/samsung-ww90ta046te,71215465857_8.jpg',
     code: 'WW90T754ABT',
     name: 'Pralka QuickDrive™',
     color: 'biała',
@@ -26,6 +28,8 @@ export const mockData: IProduct[] = [
     },
   },
   {
+    image:
+      'https://f00.esfr.pl/foto/5/71215465857/b7c91239dad8f45eae1abe48d24c6b3b/samsung-ww90ta046te,71215465857_8.jpg',
     code: 'WW90T754ABH',
     name: 'Pralka QuickDrive™',
     color: 'biała',
@@ -45,6 +49,8 @@ export const mockData: IProduct[] = [
     },
   },
   {
+    image:
+      'https://f00.esfr.pl/foto/5/71215465857/b7c91239dad8f45eae1abe48d24c6b3b/samsung-ww90ta046te,71215465857_8.jpg',
     code: 'WW90T754ABC',
     name: 'Pralka QuickDrive™',
     color: 'biała',
@@ -69,6 +75,8 @@ export const mockData: IProduct[] = [
     },
   },
   {
+    image:
+      'https://f00.esfr.pl/foto/5/71215465857/b7c91239dad8f45eae1abe48d24c6b3b/samsung-ww90ta046te,71215465857_8.jpg',
     code: 'WW90T754ABD',
     name: 'Pralka QuickDrive™',
     color: 'biała',
@@ -88,6 +96,8 @@ export const mockData: IProduct[] = [
     },
   },
   {
+    image:
+      'https://f00.esfr.pl/foto/5/71215465857/b7c91239dad8f45eae1abe48d24c6b3b/samsung-ww90ta046te,71215465857_8.jpg',
     code: 'WW90T754ABE',
     name: 'Pralka QuickDrive™',
     color: 'biała',
@@ -112,6 +122,8 @@ export const mockData: IProduct[] = [
     },
   },
   {
+    image:
+      'https://f00.esfr.pl/foto/5/71215465857/b7c91239dad8f45eae1abe48d24c6b3b/samsung-ww90ta046te,71215465857_8.jpg',
     code: 'WW90T754ABF',
     name: 'Pralka QuickDrive™',
     color: 'biała',
