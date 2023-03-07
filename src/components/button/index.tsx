@@ -2,10 +2,10 @@ import classNames from 'classnames';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: 'primary' | 'secondary' | 'tertiary';
-  chevron?: 'down';
+  icon?: React.ReactNode;
 }
 
-export const Button = ({ variant, chevron, value, className, onClick }: ButtonProps) => {
+export const Button = ({ variant, value, className, icon, onClick }: ButtonProps) => {
   return (
     <button
       className={classNames(
@@ -19,19 +19,8 @@ export const Button = ({ variant, chevron, value, className, onClick }: ButtonPr
       )}
       onClick={onClick}
     >
-      {value}
-
-      {chevron === 'down' && (
-        <svg
-          className="w-4 h-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      )}
+      <span>{value}</span>
+      <span>{icon}</span>
     </button>
   );
 };

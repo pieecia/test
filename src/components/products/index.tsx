@@ -2,6 +2,7 @@ import { mockData } from '../../mock/data';
 import { ProductCard } from '../cards/Product';
 import { Button } from '../button';
 import { useFilterContext } from '../../contexts/filters';
+import { ChevronDown } from 'react-feather';
 
 export const Products = () => {
   const { filters, query } = useFilterContext();
@@ -51,7 +52,7 @@ export const Products = () => {
         <Button
           variant={'tertiary'}
           value={'Pokaż więcej'}
-          chevron={'down'}
+          icon={<ChevronDown />}
           onClick={() => console.log('some action')}
         />
       </div>
