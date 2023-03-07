@@ -1,8 +1,8 @@
-import { Badge } from '../../badge';
 import { Button } from '../../button';
 import { IProduct } from '../../../interfaces/product';
 import { parseCurrency } from '../../../utils/parseCurrency';
 import { useCartContext } from '../../../contexts/cart';
+import { EnergyBadge } from '../../badge/Energy';
 
 export const ProductCard = (props: IProduct) => {
   const { items, setItems } = useCartContext();
@@ -40,7 +40,7 @@ export const ProductCard = (props: IProduct) => {
       </p>
       <div className="flex items-center mb-3.5 gap-2">
         <p className="text-xs text-gray-500">Klasa energetyczna</p>
-        <Badge energyClass={energyClass} />
+        <EnergyBadge energyClass={energyClass} />
       </div>
       <p className="text-xs text-gray-500">
         Cena obowiązuje od {validFrom.toLocaleDateString()} do {validTo.toLocaleDateString()}
